@@ -16,11 +16,13 @@ body {
     height: 150px;
     margin: 20px auto;
     overflow: hidden;
+    border-radius: 50%; /* Make it rounded */
 }
 
 .black-square img {
     width: 100%;
     height: auto;
+    border-radius: 50%; /* Make it rounded */
 }
 
 header {
@@ -76,6 +78,11 @@ section {
 .dropdown-content p:last-child {
     border-bottom: none;
 }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 
 .dropdown:hover .dropdown-content {
     display: block;
