@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charlton Toussaint - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Charlton's Portfolio</h1>
+    </header>
+
+    <section id="black-square">
+        <div class="black-square">
+            <img src="1691582196131.jpg" alt="Your Image">
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>My name is Charlton Toussaint, and I am a computer science major undergraduate student at the University of Connecticut. I am set to graduate in May 2024 and am excited to apply my full stack programming skills in a professional setting. I am available to work anytime after my graduation.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="dropdown">
+            <button onclick="toggleDropdown()" class="dropbtn">Select Project</button>
+            <div id="projectDropdown" class="dropdown-content">
+                
+                <div class="project-option" onclick="showProjectDetails('Reverse Translation Program')">Reverse Translation Program</div>
+                <div class="project-option" onclick="showProjectDetails('React Quiz App')">React Quiz App</div>
+                <div class="project-option" onclick="showProjectDetails('Flutter Interview App')">Flutter Interview App</div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="projectDetailsContainer"></section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
