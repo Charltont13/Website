@@ -14,9 +14,9 @@ function showProjectDetails(projectId) {
 
     //define project details
     var projectDetails = {
-        "Reverse Translation Program": {
+        "Language Translation Program": {
             technologies: "HTML5, Python, Google Cloud Translate API, Flask, Google Cloud Datastore, Sendgrid Account",
-            description: "Program that reads unread emails and implements reverse translation for interlingual communication.",
+            description: "Program that reads unread emails and implements language translation for interlingual communication.",
             githubLink: "https://github.com/Charltont13/Email-reader/tree/main"
         },
         "React Quiz App": {
