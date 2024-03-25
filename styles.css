@@ -82,6 +82,9 @@ section {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+.project-option {
+    cursor: pointer; /* Set cursor to pointer */
+}
 
 
 .dropdown:hover .dropdown-content {
