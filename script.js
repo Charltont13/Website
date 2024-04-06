@@ -1,21 +1,19 @@
-
 function toggleDropdown() {
     var dropdownContent = document.getElementById("projectDropdown");
-    dropdownContent.style.display = (dropdownContent.style.display === "block") ? "none" : "block";
+    if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+    } else {
+        dropdownContent.style.display = "block";
+    }
 }
 
-
 function showProjectDetails(projectId) {
-    //get the project details container
     var projectDetailsContainer = document.getElementById("projectDetailsContainer");
-
-    //clear previous details
     projectDetailsContainer.innerHTML = "";
 
-    //define project details
     var projectDetails = {
         "Language Translation Program": {
-            technologies: "HTML5, Python, Google Cloud Translate API, Flask, Google Cloud Datastore, Sendgrid Account",
+            technologies: "HTML5, Python, Google Cloud Translate APIs, Flask, Google Cloud Datastore",
             description: "Program that reads unread emails and implements language translation for interlingual communication.",
             githubLink: "https://github.com/Charltont13/Email-reader/tree/main"
         },
@@ -31,31 +29,25 @@ function showProjectDetails(projectId) {
         }
     };
 
-    //check if the selected project exists in projectDetails
-    if (projectDetails.hasOwnProperty(projectId)) {
-        
+    if (projectDetails[projectId]) {
         var projectTitle = document.createElement("h3");
         projectTitle.textContent = projectId;
 
         var projectTechnologies = document.createElement("p");
-        projectTechnologies.innerHTML = "<strong>Technologies:</strong> " + projectDetails[projectId].technologies;
+        projectTechnologies.textContent = "Technologies Used: " + projectDetails[projectId].technologies;
 
         var projectDescription = document.createElement("p");
         projectDescription.textContent = projectDetails[projectId].description;
 
-        
         var githubLink = document.createElement("a");
-        githubLink.textContent = "GitHub Repository";
+        githubLink.textContent = "View on GitHub";
         githubLink.href = projectDetails[projectId].githubLink;
-        githubLink.target = "_blank"; 
+        githubLink.target = "_blank";
 
-        
         projectDetailsContainer.appendChild(projectTitle);
         projectDetailsContainer.appendChild(projectTechnologies);
         projectDetailsContainer.appendChild(projectDescription);
         projectDetailsContainer.appendChild(githubLink);
     }
-
-    //hide dropdown after selecting a project
-    toggleDropdown();
+    toggleDropdown(); // This will hide the dropdown after selection
 }
