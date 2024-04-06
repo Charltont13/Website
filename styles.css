@@ -1,92 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
 body {
-    font-family: Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #000000;
-    color: white;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a1a; /* Dark background for body */
+  color: #ccc; /* Light text color for better readability on dark background */
 }
 
-#black-square {
-    background-color: #333333;
-    text-align: center;
+.header-container {
+  text-align: left;
+  background-color: #333; /* Darker background for header */
+  padding: 20px;
+  position: relative;
 }
 
-.black-square {
-    width: 150px;
-    height: 150px;
-    margin: 20px auto;
-    overflow: hidden;
-    border-radius: 50%; /* Make it rounded */
+header h1 {
+  font-family: 'Montserrat', sans-serif; /* Stylish font for the title */
+  font-size: 5em; /* Enlarged font size for the title */
+  color: #ccc; /* Light text color */
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: 10; /* Ensures text is above the image */
+  user-select: none; /* Prevents text selection */
+  white-space: nowrap; /* Prevents the text from wrapping */
 }
 
-.black-square img {
-    width: 100%;
-    height: auto;
-    border-radius: 50%; /* Make it rounded */
+.intro-container {
+  padding: 40px 60px;
+  margin-top: 300px;
 }
 
-header {
-    background-color: #000000;
-    color: white;
-    text-align: center;
-    padding: 10px;
+.about-section {
+  font-family: 'Roboto Slab', serif;
+
+  max-width: 60%; /* Adjust width as needed */
+  margin: 0 auto;
+  margin-top: 50px; /* Centering the about section */
+  text-align: center;
 }
 
-section {
-    margin: 20px;
-    padding: 20px;
-    background-color: #222222;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.portfolio-title h2 {
+  font-size: 4em;
+  text-transform: uppercase;
+  color: #555;
+  text-align: center;
+  margin: 80px 0 40px;
+  user-select: none; /* Prevents text selection */
+}
+
+.projects-container {
+  font-family: 'Roboto', serif;
+  background-color: #242424; /* Slightly lighter dark background for the section */
+  padding: 20px;
+  margin: 0 60px 40px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.projects-container h2 {
+  font-family: 'Roboto Slab', serif;
+  color: #ccc; /* Light text color */
+  user-select: none; /* Prevents text selection */
 }
 
 .dropdown {
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 
 .dropbtn {
-    padding: 10px;
-    font-size: 16px;
-    border: none;
-    background-color: #007BFF;
-    color: white;
-    border-radius: 4px;
-    cursor: pointer;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  background-color: #007BFF;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #333333;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 4px;
 }
 
-.dropdown-content .project-details {
-    padding: 15px;
-    border-bottom: 1px solid #555555;
+.dropdown-content .project-option {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer; /* Changes cursor to pointer */
+  user-select: none; /* Prevents text selection */
 }
 
-.dropdown-content h3 {
-    margin-top: 0;
+.dropdown-content .project-option:hover {
+  background-color: #555;
 }
 
-.dropdown-content p {
-    margin: 0;
+footer {
+  padding: 30px 20px;
+  background-color: #333;
+  color: white;
+  text-align: center;
 }
 
-.dropdown-content p:last-child {
-    border-bottom: none;
+footer a {
+  color: #fca311;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
+footer a:hover {
+  color: #fff;
+  text-decoration: underline;
 }
-.project-option {
-    cursor: pointer; /* Set cursor to pointer */
+
+footer p {
+  line-height: 1.6;
+  user-select: none; /* Prevents text selection */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.intro-container {
+  padding: 40px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space out the about section and image */
+  margin-top: 100px; /* Increase the margin-top to push the section down */
 }
 
 
-.dropdown:hover .dropdown-content {
-    display: block;
+/* Profile picture styles with grayscale filter */
+.profile-picture {
+  filter: grayscale(100%); /* Make the image grayscale */
+  width: 200px; /* Adjust the size as needed */
+  border-radius: 20; /* If you want to remove the roundness */
+  border: 5px solid #333; /* Dark border around the image */
+
+  position: absolute;
+  right: 80px;
+   /* Move the image slightly to the right */
+  top: 450%;
+  transform: translateY(-50%); /* Center the image vertically */
+  z-index: 9; /* Lower z-index than the title so it's beneath */
 }
