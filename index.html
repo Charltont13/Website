@@ -1,46 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Charlton Toussaint - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
 </head>
-
 <body>
-    <header>
-        <h1>Charlton's Portfolio</h1>
-    </header>
-
-    <section id="black-square">
-        <div class="black-square">
-            <img src="1691582196131.jpg" alt="Your Image">
+    <div class="header-container">
+        <header>
+            <h1>Charlton's Portfolio</h1>
+        </header>
+        <img src="1691582196131.jpg" alt="Charlton Toussaint" class="profile-picture">
+    </div>
+    
+    <div class="intro-container">
+        <div class="about-section">
+            <h2>About Me</h2>
+            <p>I'm Charlton Toussaint, a computer science major undergraduate student at the University of Connecticut. Software development is a field that interests me. I adhere to the philosophy that a job is never truly finished.</p>
         </div>
-    </section>
+    </div>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>My name is Charlton Toussaint, and I am a computer science major undergraduate student at the University of Connecticut. I am set to graduate in May 2024 and am excited to apply my full stack programming skills in a professional setting. I am available to work anytime after my graduation.</p>
-    </section>
-
-    <section id="projects">
+    
+    <section id="projects" class="projects-container">
         <h2>Projects</h2>
         <div class="dropdown">
             <button onclick="toggleDropdown()" class="dropbtn">Select Project</button>
             <div id="projectDropdown" class="dropdown-content">
-                
                 <div class="project-option" onclick="showProjectDetails('Language Translation Program')">Language Translation Program</div>
                 <div class="project-option" onclick="showProjectDetails('React Quiz App')">React Quiz App</div>
                 <div class="project-option" onclick="showProjectDetails('Flutter Interview App')">Flutter Interview App</div>
             </div>
         </div>
+        <div id="projectDetailsContainer"></div>
     </section>
-    
 
-    <section id="projectDetailsContainer"></section>
+    <footer>
+        <p>Contact Information</p>
+        <p>Email: <a href="mailto:charlton.toussaint@uconn.edu">charlton.toussaint@uconn.edu</a></p>
+        <p>Phone: 475-208-0989</p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/charlton-toussaint" target="_blank">linkedin.com/in/charlton-toussaint</a></p>
+        <p>GitHub: <a href="https://github.com/Charltont13" target="_blank">github.com/Charltont13</a></p>
+       
+    </footer>
 
     <script src="script.js"></script>
 </body>
-
 </html>
