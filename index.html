@@ -47,5 +47,27 @@
     </footer>
 
     <script src="script.js"></script>
+
+    <!-- External JS Libraries -->
+    <script src="https://unpkg.com/three@0.134.0/build/three.min.js"></script>
+    <script src="https://unpkg.com/vanta/dist/vanta.waves.min.js"></script>
+    <!-- VANTA Background Initialization -->
+    <script>
+    VANTA.WAVES({
+      el: "body", // Target the whole body for the animation
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      color: 0x191d20,
+      waveSpeed: 0.55,
+      zoom: 0.76
+    })
+    </script>
+    <!-- Your existing script.js -->
+    <script src="script.js"></script>
 </body>
 </html>
