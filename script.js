@@ -51,3 +51,20 @@ function showProjectDetails(projectId) {
     }
     toggleDropdown(); // This will hide the dropdown after selection
 }
+
+function addRecommendation() {
+    var recommendationText = document.getElementById("recommendationText").value;
+    if (recommendationText.trim() !== "") {
+        var newRecommendation = document.createElement("div");
+        newRecommendation.className = "recommendation-item";
+        newRecommendation.innerHTML = `<p>"${recommendationText}"</p><p>- Anonymous</p>`;
+        var recommendationsContainer = document.querySelector(".recommendations-container");
+        recommendationsContainer.appendChild(newRecommendation);
+
+        // Show popup
+        alert("Thank you for adding your recommendation!");
+
+        // Clear the textarea
+        document.getElementById("recommendationText").value = "";
+    }
+}
