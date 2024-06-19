@@ -6,24 +6,58 @@
     <title>Charlton Toussaint - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-
 </head>
 <body>
-    <div class="header-container">
-        <header>
-            <h1>Charlton's Portfolio</h1>
-        </header>
-        <img src="1691582196131.jpg" alt="Charlton Toussaint" class="profile-picture">
-    </div>
-    
-    <div class="intro-container">
+    <nav>
+        <ul>
+            <li class="name">Charlton Toussaint</li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Project Details</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#recommendations">Recommendations</a></li>
+        </ul>
+    </nav>
+
+
+
+    <div id="about" class="intro-container">
         <div class="about-section">
             <h2>About Me</h2>
-            <p>I'm Charlton Toussaint, a graduate in Computer Science from the University of Connecticut. Software development is a field that interests me. I adhere to the philosophy that a job is never truly finished.</p>
+            <img src="IMG_0958.jpg" alt="Charlton Toussaint" class="profile-picture">
+            <p>I'm Charlton Toussaint, a computer science major undergraduate student at the University of Connecticut. I am passionate about software development and believe that a job is never truly finished. I strive to continually improve and learn new skills.</p>
         </div>
     </div>
 
-    
+    <div class="section-divider"></div>
+
+    <section id="skills" class="skills-container">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-item">
+                <img src="H.jpg" alt="HTML">
+                <p>HTML</p>
+            </div>
+            <div class="skill-item">
+                <img src="JS.jpg" alt="JavaScript">
+                <p>JavaScript</p>
+            </div>
+            <div class="skill-item">
+                <img src="CSS.jpg" alt="CSS">
+                <p>CSS</p>
+            </div>
+            <div class="skill-item">
+                <img src="R.jpg" alt="React">
+                <p>React</p>
+            </div>
+            <div class="skill-item">
+                <img src="J.jpg" alt="Java">
+                <p>Java</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
     <section id="projects" class="projects-container">
         <h2>Projects</h2>
         <div class="dropdown">
@@ -37,37 +71,56 @@
         <div id="projectDetailsContainer"></div>
     </section>
 
+    <div class="section-divider"></div>
+
+    <section id="recommendations" class="recommendations-container">
+        <h2>Recommendations</h2>
+        <div class="recommendation-box">
+            <div class="recommendation-item">
+                <p>"Charlton has a very great attitude towards working and is a very intelligent individual."</p>
+
+            </div>
+            <div class="recommendation-item">
+                <p>"Charlton is always willing to go the extra mile to ensure project success. Highly recommend!"</p>
+
+            </div>
+            <div class="recommendation-item">
+                <p>"Working with Charlton has been a pleasure. His skills and dedication are top-notch."</p>
+
+            </div>
+            <div class="recommendation-form">
+                <h3>Leave a Recommendation</h3>
+                <textarea id="recommendationText" placeholder="Enter your recommendation here..."></textarea>
+                <button onclick="addRecommendation()">Submit</button>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <p>Contact Information</p>
-        <p>Email: <a href="mailto:charltontoussaint@gmail.com">charltontoussaint@gmail.com</a></p>
+        <p>Email: <a href="mailto:charlton.toussaint@uconn.edu">charlton.toussaint@uconn.edu</a></p>
         <p>Phone: 475-208-0989</p>
         <p>LinkedIn: <a href="https://linkedin.com/in/charlton-toussaint" target="_blank">linkedin.com/in/charlton-toussaint</a></p>
         <p>GitHub: <a href="https://github.com/Charltont13" target="_blank">github.com/Charltont13</a></p>
-       
     </footer>
 
     <script src="script.js"></script>
-
-    <!-- External JS Libraries -->
     <script src="https://unpkg.com/three@0.134.0/build/three.min.js"></script>
     <script src="https://unpkg.com/vanta/dist/vanta.waves.min.js"></script>
-    <!-- VANTA Background Initialization -->
     <script>
     VANTA.WAVES({
-      el: "body", // Target the whole body for the animation
-      mouseControls: true,
-      touchControls: true,
-      gyroControls: false,
-      minHeight: 200.00,
-      minWidth: 200.00,
-      scale: 1.00,
-      scaleMobile: 1.00,
-      color: 0x191d20,
-      waveSpeed: 0.55,
-      zoom: 0.76
-    })
+        el: "body",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0x191d20,
+        waveSpeed: 0.55,
+        zoom: 0.76
+    });
     </script>
-    <!-- Your existing script.js -->
-    <script src="script.js"></script>
 </body>
 </html>
